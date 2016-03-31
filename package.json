@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "keystone": "https://github.com/keystonejs/keystone.git",
+    "keystone": "https://github.com/keystonejs/keystone.git#v0.3.x",
     "async": "^1.5.0",
     "underscore": "^1.8.3",
     "dotenv": "^1.1.0"
