@@ -25,6 +25,7 @@ var importRoutes = keystone.importer(__dirname);
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
+keystone.redirect('/talleres', 'https://docs.google.com/forms/d/1zoyW-FQwimMXnu-NA4hWbteQZjNvyFB6_5cscxruWjk/viewform');
 keystone.redirect('/talleres/', 'https://docs.google.com/forms/d/1zoyW-FQwimMXnu-NA4hWbteQZjNvyFB6_5cscxruWjk/viewform');
 
 // Import Route Controllers
