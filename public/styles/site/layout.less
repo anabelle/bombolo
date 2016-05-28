@@ -1,5 +1,40 @@
+@font-face {
+    font-family: 'dk_lemon_yellow_sunregular';
+    src: url('/fonts/dk_lemon_yellow_sun-webfont.eot');
+    src: url('/fonts/dk_lemon_yellow_sun-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/dk_lemon_yellow_sun-webfont.woff2') format('woff2'),
+         url('/fonts/dk_lemon_yellow_sun-webfont.woff') format('woff'),
+         url('/fonts/dk_lemon_yellow_sun-webfont.ttf') format('truetype'),
+         url('/fonts/dk_lemon_yellow_sun-webfont.svg#dk_lemon_yellow_sunregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.image-replacement( @url, @width, @height ) {
+    display: block;
+    width: @width;
+    height: @height;
+    background: url(@url) no-repeat left top;
+    background-size:  @width @height;
+    .text-hide();
+}
+
+.logo {
+    .image-replacement( "/images/bombolo.png", 360px, 475px );
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 {
+	font-family: 'dk_lemon_yellow_sunregular';
+}
+
 html {
 	min-height: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 #header {
@@ -21,12 +56,36 @@ html {
 
 .home {
 	height: 100%;
-	background-image: url( /images/bombolo.jpg ), url( /images/bg.jpg );
+	background-image: url( /images/bg.jpg );
 	background-position: 50% 50%;
-	background-repeat: no-repeat, repeat-x;
+	background-repeat: repeat-x;
 	background-size: contain;
+	text-align: center;
 
-	h1 , h2 {
-		display:none;
+	h1 {
+		margin: 60px auto 0;
+	}
+
+	h2 {
+		margin: 0;
+		font-size: 3.2em;;
+	}
+
+	h3 {
+		margin: 0;
+
+		a {
+			font-family: 'Helvetica',sans-serif;
+		    font-weight: normal;
+		    font-size: 0.8em;
+		    vertical-align: middle;
+		}
+	}
+
+	.contenido {
+		margin: 0 auto;
+		text-align: left;
+		max-width: 840px;
+		padding: 1.5em 2em;
 	}
 }
